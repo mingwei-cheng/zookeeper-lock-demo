@@ -1,0 +1,21 @@
+server:
+  port: 8889
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    eureka-server-port: 8008
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.client.eureka-server-port}/eureka/
+
+zookeeper:
+  address: 192.168.0.128
+  timeout: 3000
+
+shop:
+  path: /shop/phone
+
+spring:
+  application:
+    name: shop
